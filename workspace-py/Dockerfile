@@ -1,12 +1,3 @@
-FROM dhi.io/debian-base:trixie-dev@sha256:61025cea33d5910165ced8b33edd3f6b6bfe161e129174887936a1b9a1442b20 AS python-licenses
-
-ADD --checksum=sha256:070b1e7da3db719755a2fdaa0cb836f41d3138e0c3ecf4669eb08f62fbb28021 https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.14.10+20261026-aarch64-unknown-linux-gnu-debug-full.tar.zst /tmp/python.tar.zst
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-      zstd=1.5.7+dfsg-1+deb13u0+dhi3 && \
-    tar -xf /tmp/python.tar.zst -C /tmp python/licenses && \
-    install -D -m 644 -t /opt/python/share/licenses/python /tmp/python/licenses/*
-
 FROM dhi.io/debian-base:trixie-dev@sha256:61025cea33d5910165ced8b33edd3f6b6bfe161e129174887936a1b9a1442b20
 ENV LANG=C.UTF-8
 
@@ -17,7 +8,6 @@ ADD --chmod=644 --checksum=sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f7
 ADD --chmod=644 --checksum=sha256:860e3d7a86b84e6a7012c7a635fc64df475cebc6cce34dfeb73a5982ec58176c https://raw.githubusercontent.com/astral-sh/uv/0.13.7/LICENSE-MIT /usr/local/share/licenses/uv/
 COPY --from=jj /opt/jj/bin/jj /usr/local/bin/jj
 COPY --from=jj /opt/jj/share/licenses/ /usr/local/share/licenses/
-COPY --from=python-licenses /opt/python/share/licenses/ /usr/local/share/licenses/
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
