@@ -11,16 +11,8 @@ COPY --from=jj /opt/jj/share/licenses/ /usr/local/share/licenses/
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      btop=1.3.2-0.1 \
       git=1:2.47.3-0+deb13u1+dhi2 \
-      openssh-client=1:10.0p1-7+deb13u4+dhi2 \
-      tree=2.2.1-1+deb13u0+dhi0 && \
+      openssh-client=1:10.0p1-7+deb13u4+dhi2 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN uv python install 3.14.10 && \
-    rm -rf \
-      /root/.local/share/uv/python/cpython-3.14*/lib/python3.14/ensurepip \
-      /root/.local/share/uv/python/cpython-3.14*/lib/python3.14/site-packages/pip*
-
-WORKDIR /root
 ENTRYPOINT ["/usr/bin/zsh"]
