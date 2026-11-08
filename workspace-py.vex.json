@@ -1,0 +1,1653 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/startown-ai/workspace-py/blob/main/workspace-py.vex.json",
+  "author": "Paxon Lee <paxonlee@startown.ai>",
+  "role": "Document Creator",
+  "version": 1,
+  "timestamp": "2026-11-08T16:00:00Z",
+  "statements": [
+    {
+      "@id": "urn:uuid:492c679d-ae01-567c-9449-182014811cc9",
+      "vulnerability": {
+        "name": "CVE-2005-2541"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar@1.35%2Bdfsg-3.1%2Bdeb13u0%2Bdhi3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "Everything in the image already runs as root, so a setuid or setgid file extracted by tar grants nothing new, and nothing in the image extracts untrusted archives (dpkg-deb unpacks only packages apt has verified; uv uses its own extractors)."
+    },
+    {
+      "@id": "urn:uuid:d60ba4dd-9af0-56b1-9448-aaca073f8fa9",
+      "vulnerability": {
+        "name": "CVE-2007-2243"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The user enumeration is in sshd's S/KEY challenge-response."
+    },
+    {
+      "@id": "urn:uuid:fce91a61-035b-5f3a-8c10-d76518ac5257",
+      "vulnerability": {
+        "name": "CVE-2007-2768"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The user enumeration is in sshd's OPIE/PAM authentication."
+    },
+    {
+      "@id": "urn:uuid:6a70b43c-2089-554f-a0c8-115200a58f76",
+      "vulnerability": {
+        "name": "CVE-2007-5686"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login.defs@1%3A4.17.4-2%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/passwd@1%3A4.17.4-2%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/shadow@1%3A4.17.4-2%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The insecure permissions were set by rPath Linux's initscripts on /var/log/btmp; the image has neither."
+    },
+    {
+      "@id": "urn:uuid:c0482cd4-2245-5123-9329-dcdab67c6cee",
+      "vulnerability": {
+        "name": "CVE-2008-3234"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The SELinux role selection is in sshd's login handling."
+    },
+    {
+      "@id": "urn:uuid:51d5548e-046c-54a0-85c8-f898c9a5503e",
+      "vulnerability": {
+        "name": "CVE-2010-0928"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64@3.5.7-1~deb13u3%2Bdhi0"
+            },
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy@3.5.7-1~deb13u3%2Bdhi0"
+            },
+            {
+              "@id": "pkg:deb/debian/openssl@3.5.7-1~deb13u3%2Bdhi0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The attack needs physical fault injection on the CPU (modified supply voltage), which OpenSSL's security policy places outside its threat model."
+    },
+    {
+      "@id": "urn:uuid:9be3921d-c11e-5c8a-9292-b34c8e61a9c5",
+      "vulnerability": {
+        "name": "CVE-2010-4756"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The glob() resource use needs an attacker-chosen pattern, such as an FTP server passing remote STAT arguments to glob()."
+    },
+    {
+      "@id": "urn:uuid:c4b1a31c-0bcb-57ac-bbe1-b3204c5cdef3",
+      "vulnerability": {
+        "name": "CVE-2011-3374"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/apt@3.0.4%2Bdhi0"
+            },
+            {
+              "@id": "pkg:deb/debian/libapt-pkg7.0@3.0.4%2Bdhi0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The flaw is in apt-key, which apt 3.0 no longer ships; the image has no apt-key."
+    },
+    {
+      "@id": "urn:uuid:86ffbbd2-1a0f-585e-9b0c-a0b4c4d4f7f8",
+      "vulnerability": {
+        "name": "CVE-2011-3389"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The CBC chosen-plaintext attack (BEAST) needs TLS traffic through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:3e1a56cc-f1e4-5a81-a6d9-1932a4249eaf",
+      "vulnerability": {
+        "name": "CVE-2011-4116"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libperl5.40@5.40.1-6%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/perl-base@5.40.1-6%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/perl-modules-5.40@5.40.1-6%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/perl@5.40.1-6%2Bdeb13u1%2Bdhi3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "File::Temp calls _is_safe only with safe_level MEDIUM or HIGH, and no Perl code in the image sets safe_level."
+    },
+    {
+      "@id": "urn:uuid:d2096d23-67da-545d-97b1-996a51773d3f",
+      "vulnerability": {
+        "name": "CVE-2013-4392"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libudev1@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/systemd@257.13-1~deb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The symlink race is in systemd-tmpfiles, which the image doesn't include; libsystemd0 and libudev1 are libraries only."
+    },
+    {
+      "@id": "urn:uuid:2bf18dc2-a4c0-50b1-b023-6b650c95aeaa",
+      "vulnerability": {
+        "name": "CVE-2015-3276"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libldap2@2.6.10%2Bdfsg-1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/openldap@2.6.10%2Bdfsg-1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The cipher parsing is in libldap's Mozilla NSS backend; Debian builds libldap with OpenSSL (it links libssl.so.3)."
+    },
+    {
+      "@id": "urn:uuid:ff234b10-de9d-57f8-84ea-d3c4d1b5eb51",
+      "vulnerability": {
+        "name": "CVE-2016-20012"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The public key oracle is in sshd's authentication."
+    },
+    {
+      "@id": "urn:uuid:ff06ea0a-0d45-5b6c-be39-04b4e21582b8",
+      "vulnerability": {
+        "name": "CVE-2017-14159"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libldap2@2.6.10%2Bdfsg-1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/openldap@2.6.10%2Bdfsg-1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The PID file handling is in slapd, the LDAP server, which the image doesn't include."
+    },
+    {
+      "@id": "urn:uuid:59fbfe2d-a5b6-58b8-bee8-5111fb20aba6",
+      "vulnerability": {
+        "name": "CVE-2017-17740"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libldap2@2.6.10%2Bdfsg-1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/openldap@2.6.10%2Bdfsg-1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The bug is in slapd's nops module, and the image has no slapd."
+    },
+    {
+      "@id": "urn:uuid:d916ba15-f5ff-5d05-839e-34bd9e8e061a",
+      "vulnerability": {
+        "name": "CVE-2017-18018"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/coreutils@9.7-3%2Bdhi4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The race needs root to run chown or chgrp with -R -L on a tree another user can write to. The image has no other users, nothing in it runs chown -R -L, and the kernel's protected_symlinks setting neutralises it."
+    },
+    {
+      "@id": "urn:uuid:d2db72a5-04b7-50c4-8908-94e76540b190",
+      "vulnerability": {
+        "name": "CVE-2018-1000021"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/git@1%3A2.47.3-0%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "git prints messages from the remote server, terminal control codes included. Upstream and Debian leave escaping to the terminal emulator. Fetch from servers you trust, or use a terminal that filters control codes."
+    },
+    {
+      "@id": "urn:uuid:afe7803d-3fa0-5724-a914-a865859f3b67",
+      "vulnerability": {
+        "name": "CVE-2018-15919"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The user enumeration is in sshd's auth-gss2.c."
+    },
+    {
+      "@id": "urn:uuid:23e54933-9baa-5438-89cc-8c5a49dca650",
+      "vulnerability": {
+        "name": "CVE-2018-20796"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The regex recursion needs an attacker-chosen regular expression; glibc doesn't treat crafted patterns as a security boundary."
+    },
+    {
+      "@id": "urn:uuid:84265adf-3d6d-5d3e-aa50-940977f5c749",
+      "vulnerability": {
+        "name": "CVE-2018-5709"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/krb5@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgssapi-krb5-2@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libk5crypto3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5-3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5support0@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The overflow is in kadmin's database dump code; the image has the Kerberos client libraries only, no kadmin or KDC."
+    },
+    {
+      "@id": "urn:uuid:7505b61e-de3e-5fc8-b2c4-5695933f842a",
+      "vulnerability": {
+        "name": "CVE-2018-6829"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libgcrypt20@1.11.0-7%2Bdeb13u1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgcrypt's users in the image are gpgv, which only verifies signatures, and libsystemd0, whose journal sealing isn't used (no journald). The weakness is in direct ElGamal encryption, which neither uses."
+    },
+    {
+      "@id": "urn:uuid:b14ec520-3082-5ce2-9e17-aaeb2011afbd",
+      "vulnerability": {
+        "name": "CVE-2019-1010022"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "A weakness in glibc's stack protector for threads, useful only together with a separate stack buffer overflow in a program. Upstream treats it as a non-security bug and no fix exists; nothing to do on its own."
+    },
+    {
+      "@id": "urn:uuid:d5842ee2-3f06-5f36-8990-5b098523dcd5",
+      "vulnerability": {
+        "name": "CVE-2019-1010023"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "ldd can run code from the file it inspects, as its manual warns. Nothing in the image runs ldd; don't run it on files you don't trust."
+    },
+    {
+      "@id": "urn:uuid:97d229f0-19c8-5a8b-9e53-03ec2a2a28dc",
+      "vulnerability": {
+        "name": "CVE-2019-1010024"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "A weakness in address space layout randomization, useful only together with a separate memory-corruption bug in a program. Upstream treats it as a non-security bug and no fix exists; nothing to do on its own."
+    },
+    {
+      "@id": "urn:uuid:916adc68-91ac-5fa5-93c3-fd4425e33aae",
+      "vulnerability": {
+        "name": "CVE-2019-1010025"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "A weakness in address space layout randomization for thread heaps, useful only together with a separate memory-corruption bug in a program. Upstream treats it as a non-security bug and no fix exists; nothing to do on its own."
+    },
+    {
+      "@id": "urn:uuid:a6cbae78-34ad-5860-b61e-58c7e02957dc",
+      "vulnerability": {
+        "name": "CVE-2019-6110"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "scp shows output from the server's side unfiltered, so a malicious server can use terminal control codes to hide what it transfers. Upstream and Debian leave escaping to the terminal emulator. Copy only from servers you trust, or check what arrived afterwards."
+    },
+    {
+      "@id": "urn:uuid:d64873af-4476-561f-9272-7eb218ff2546",
+      "vulnerability": {
+        "name": "CVE-2019-9192"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The regex recursion needs an attacker-chosen regular expression; glibc doesn't treat crafted patterns as a security boundary."
+    },
+    {
+      "@id": "urn:uuid:cba47458-ac09-5628-be15-ed513b573807",
+      "vulnerability": {
+        "name": "CVE-2020-14145"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "On a first connection, with no host key cached yet, the algorithms ssh offers tell a man-in-the-middle that the client doesn't know the host. Upstream keeps the behaviour. Add known host keys from a trusted source (known_hosts, or SSHFP records with VerifyHostKeyDNS) before the first connection."
+    },
+    {
+      "@id": "urn:uuid:c5237801-87c8-5c67-a20f-11091934b9a8",
+      "vulnerability": {
+        "name": "CVE-2020-15719"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libldap2@2.6.10%2Bdfsg-1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/openldap@2.6.10%2Bdfsg-1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The CN fallback is in libldap's TLS hostname check. libldap's only user in the image is libcurl, for ldap:// and ldaps:// URLs. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). "
+    },
+    {
+      "@id": "urn:uuid:41002ee8-d3ea-5c56-b80b-e0b970273213",
+      "vulnerability": {
+        "name": "CVE-2020-15778"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "scp in OpenSSH 10.0 uses the SFTP protocol by default, which runs no remote shell command. Only the legacy protocol (scp -O) passes the destination to the remote shell, and that matters only on servers that restrict accounts to scp; the image has no SSH server."
+    },
+    {
+      "@id": "urn:uuid:e59bd2a1-c2c2-5fe9-b74d-334c11fba491",
+      "vulnerability": {
+        "name": "CVE-2021-45346"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u2%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/sqlite3@3.46.1-7%2Bdeb13u2%2Bdhi3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The leak needs a crafted database file. libsqlite3's only user in the image is liblastlog2 (lslogins), whose database would be root-owned in /var/lib/lastlog, which doesn't exist; there is no sqlite3 shell."
+    },
+    {
+      "@id": "urn:uuid:8034a34a-429c-501d-b65f-5880b98870ae",
+      "vulnerability": {
+        "name": "CVE-2022-0563"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1@2.41.5-0%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2@2.41.5-0%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/libmount1@2.41.5-0%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/libsmartcols1@2.41.5-0%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/libuuid1@2.41.5-0%2Bdeb13u1%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/util-linux@2.41.5-0%2Bdeb13u1%2Bdhi3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The flaw is in util-linux's chfn and chsh built with readline; Debian builds util-linux without them. The image's chfn and chsh come from passwd (shadow) and don't link readline."
+    },
+    {
+      "@id": "urn:uuid:032c3d57-b457-5aa2-9e37-db3eb1ae21e6",
+      "vulnerability": {
+        "name": "CVE-2022-24975"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/git@1%3A2.47.3-0%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The CVE concerns the documentation of git clone --mirror, which doesn't say that mirrors include deleted content; there is no code flaw."
+    },
+    {
+      "@id": "urn:uuid:57d90797-ee3e-582e-9919-4c803e1b2773",
+      "vulnerability": {
+        "name": "CVE-2022-3219"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnupg2@2.4.7-21%2Bdeb13u1%2Bdhi4"
+            },
+            {
+              "@id": "pkg:deb/debian/gpgv@2.4.7-21%2Bdeb13u1%2Bdhi4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The slowdown needs a crafted public key. The image has gpgv only, which apt runs against the keyrings shipped in the image, not keys from elsewhere."
+    },
+    {
+      "@id": "urn:uuid:11960241-ee79-5562-8ddf-ff9be1e93d0e",
+      "vulnerability": {
+        "name": "CVE-2023-31437"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libudev1@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/systemd@257.13-1~deb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image has no systemd-journald, no journalctl and no journal files. libsystemd0 is loaded only by apt's http method, util-linux tools and coreutils' who, users and pinky, none of which reads or verifies sealed journals. "
+    },
+    {
+      "@id": "urn:uuid:49ba645f-5856-568f-abe3-30dfcfd09aa5",
+      "vulnerability": {
+        "name": "CVE-2023-31438"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libudev1@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/systemd@257.13-1~deb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image has no systemd-journald, no journalctl and no journal files. libsystemd0 is loaded only by apt's http method, util-linux tools and coreutils' who, users and pinky, none of which reads or verifies sealed journals. "
+    },
+    {
+      "@id": "urn:uuid:a8b8512d-e7d0-5a6a-9eef-b71e2db7137a",
+      "vulnerability": {
+        "name": "CVE-2023-31439"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libudev1@257.13-1~deb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/systemd@257.13-1~deb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image has no systemd-journald, no journalctl and no journal files. libsystemd0 is loaded only by apt's http method, util-linux tools and coreutils' who, users and pinky, none of which reads or verifies sealed journals. "
+    },
+    {
+      "@id": "urn:uuid:7c1cd29c-87a6-5147-a906-8c3839ba53e9",
+      "vulnerability": {
+        "name": "CVE-2023-51767"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The row hammer target is sshd's mm_answer_authpassword."
+    },
+    {
+      "@id": "urn:uuid:a61efece-f4f4-5ab8-8596-b8e2480b381c",
+      "vulnerability": {
+        "name": "CVE-2024-2236"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libgcrypt20@1.11.0-7%2Bdeb13u1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgcrypt's users in the image are gpgv, which only verifies signatures, and libsystemd0, whose journal sealing isn't used (no journald). The timing leak is in RSA decryption, which neither does."
+    },
+    {
+      "@id": "urn:uuid:75a98de8-5209-52e0-877c-f711193c0e8b",
+      "vulnerability": {
+        "name": "CVE-2024-26458"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/krb5@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgssapi-krb5-2@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libk5crypto3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5-3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5support0@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The leak is in pmap_rmt.c of the RPC library libgssrpc, which the image doesn't include."
+    },
+    {
+      "@id": "urn:uuid:7d5646e5-fc75-5b32-9114-21f7a5a55658",
+      "vulnerability": {
+        "name": "CVE-2024-26461"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/krb5@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgssapi-krb5-2@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libk5crypto3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5-3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5support0@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The leak is on an error path in k5sealv3.c that MIT says API calls can't reach (kerberos mailing list, March 2024). libgssapi_krb5's users in the image are ssh (GSSAPIAuthentication) and libcurl."
+    },
+    {
+      "@id": "urn:uuid:b34fd17c-6883-59ba-8fbd-b62d74efba25",
+      "vulnerability": {
+        "name": "CVE-2024-52005"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/git@1%3A2.47.3-0%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "action_statement": "git prints the remote's sideband messages (\"remote: ...\") unfiltered, terminal control codes included. Upstream and Debian leave escaping to the terminal emulator. Fetch from servers you trust, or use a terminal that filters control codes."
+    },
+    {
+      "@id": "urn:uuid:a819a691-baf7-5535-aee2-1f2745a2f97a",
+      "vulnerability": {
+        "name": "CVE-2025-10966"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Debian's libcurl4t64 uses OpenSSL for TLS and libssh2 for SCP/SFTP (it links libssl.so.3 and libssh2.so.1), and is built without wolfSSL, wolfSSH and libssh. The flaw is in the wolfSSH backend."
+    },
+    {
+      "@id": "urn:uuid:45138ad0-b495-5025-a2aa-258bf68df9c6",
+      "vulnerability": {
+        "name": "CVE-2025-14017"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The flaw is in libcurl's legacy LDAP code; Debian builds libcurl with OpenLDAP instead. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). "
+    },
+    {
+      "@id": "urn:uuid:331f27f3-9688-5fa6-be2b-8cbf095face8",
+      "vulnerability": {
+        "name": "CVE-2025-15079"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Debian's libcurl4t64 uses OpenSSL for TLS and libssh2 for SCP/SFTP (it links libssl.so.3 and libssh2.so.1), and is built without wolfSSL, wolfSSH and libssh. The flaw is in the libssh backend."
+    },
+    {
+      "@id": "urn:uuid:da622369-42b3-52a7-90dc-a620b628f434",
+      "vulnerability": {
+        "name": "CVE-2025-15224"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Debian's libcurl4t64 uses OpenSSL for TLS and libssh2 for SCP/SFTP (it links libssl.so.3 and libssh2.so.1), and is built without wolfSSL, wolfSSH and libssh. The flaw is in the libssh backend."
+    },
+    {
+      "@id": "urn:uuid:0f243479-0257-5563-8a2a-624e8c4bae41",
+      "vulnerability": {
+        "name": "CVE-2025-45582"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar@1.35%2Bdfsg-3.1%2Bdeb13u0%2Bdhi3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The attack needs a program that extracts several attacker-supplied archives into the same directory. Nothing in the image does: dpkg-deb runs tar only on packages apt has verified against signed repositories, uv extracts archives with its own Rust code (astral-tokio-tar, async_zip), and jj and git don't extract tar archives. GNU tar treats the behaviour as documented. If you extract untrusted archives yourself, extract each into its own new directory."
+    },
+    {
+      "@id": "urn:uuid:94397488-0357-5293-87e1-1aebc8281389",
+      "vulnerability": {
+        "name": "CVE-2025-5278"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/coreutils@9.7-3%2Bdhi4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The under-read needs crafted sort key arguments in the traditional +POS format."
+    },
+    {
+      "@id": "urn:uuid:1dbcdedc-4b54-5f92-ae73-852590984907",
+      "vulnerability": {
+        "name": "CVE-2025-70873"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u2%2Bdhi3"
+            },
+            {
+              "@id": "pkg:deb/debian/sqlite3@3.46.1-7%2Bdeb13u2%2Bdhi3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The bug is in SQLite's zipfile extension, which Debian's libsqlite3 isn't built with (the library has no zipfile code)."
+    },
+    {
+      "@id": "urn:uuid:7bc09366-d10f-54a9-a2db-cb68055601ec",
+      "vulnerability": {
+        "name": "CVE-2026-106584"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The error is in ssh-keygen's conversion of local times around daylight saving changes. The image runs in UTC (no /etc/localtime, TZ unset), which has no daylight saving time. If you set TZ to a zone that does and sign certificates with ssh-keygen -V, check their validity period."
+    },
+    {
+      "@id": "urn:uuid:a005d245-65e7-5b10-84f8-5f144f2cbc10",
+      "vulnerability": {
+        "name": "CVE-2026-115456"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base@14.2.0-19%2Bdeb13u0%2Bdhi6"
+            },
+            {
+              "@id": "pkg:deb/debian/gcc-14@14.2.0-19%2Bdeb13u0%2Bdhi6"
+            },
+            {
+              "@id": "pkg:deb/debian/libgcc-s1@14.2.0-19%2Bdeb13u0%2Bdhi6"
+            },
+            {
+              "@id": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19%2Bdeb13u0%2Bdhi6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The read is in libstdc++'s std::from_chars. libstdc++'s users in the image are apt and its methods, and none of them imports from_chars (checked with nm -D)."
+    },
+    {
+      "@id": "urn:uuid:426683f0-14d8-5764-a0ee-0b4c6d3a67e1",
+      "vulnerability": {
+        "name": "CVE-2026-117610"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/expat@2.9.0-1~deb13u1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "inline_mitigations_already_exist",
+      "impact_statement": "libexpat1 2.9.0-1~deb13u1+dhi1 carries upstream libexpat PR #1444 (merge 2480a052) as debian/patches/dhi-cve-2026-117610-empty-subparser-none-token.patch; its changes to lib/xmlparse.c match the upstream PR line for line. The only program in the image that links libexpat is /usr/lib/git-core/git-http-push, used by git push over dumb HTTP (WebDAV). It never creates an external entity parser either: it doesn't import XML_ExternalEntityParserCreate."
+    },
+    {
+      "@id": "urn:uuid:753e113e-61dd-556a-8824-826cd542fbba",
+      "vulnerability": {
+        "name": "CVE-2026-118370"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/expat@2.9.0-1~deb13u1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "inline_mitigations_already_exist",
+      "impact_statement": "libexpat1 2.9.0-1~deb13u1+dhi1 carries upstream libexpat PR #1450 (merge c8c6d896) as debian/patches/dhi-cve-2026-118370-storeatts-signed-overflow.patch; its changes to lib/xmlparse.c match the upstream PR line for line. The only program in the image that links libexpat is /usr/lib/git-core/git-http-push, used by git push over dumb HTTP (WebDAV). "
+    },
+    {
+      "@id": "urn:uuid:8538ac37-6018-599c-bc75-a981c5aaf758",
+      "vulnerability": {
+        "name": "CVE-2026-11850"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/krb5@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgssapi-krb5-2@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libk5crypto3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5-3@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libkrb5support0@1.21.3-5%2Bdeb13u1%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The underflow is in the KDC's LDAP database plugin (libkdb_ldap); the image has no KDC and no kdb plugins."
+    },
+    {
+      "@id": "urn:uuid:b15bdd22-6bf8-5064-b842-3ca15207b71f",
+      "vulnerability": {
+        "name": "CVE-2026-123158"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssh-client@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/openssh@1%3A10.0p1-7%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image has openssh-client only: no sshd, so no server code runs. The password bypass is in sshd on musl without PAM; the image uses glibc."
+    },
+    {
+      "@id": "urn:uuid:0cbcc5c4-560a-5b9f-83a8-4e3bc6844573",
+      "vulnerability": {
+        "name": "CVE-2026-124317"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/expat@2.9.0-1~deb13u1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libexpat1@2.9.0-1~deb13u1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The out-of-bounds read is in the converters for application-registered unknown encodings, reachable only after XML_SetUnknownEncodingHandler. The only program in the image that links libexpat is /usr/lib/git-core/git-http-push, used by git push over dumb HTTP (WebDAV). It imports only XML_ParserCreate, XML_SetUserData, XML_SetElementHandler, XML_SetCharacterDataHandler, XML_Parse, XML_GetErrorCode, XML_ErrorString and XML_ParserFree, on both platforms, so it never registers such a handler."
+    },
+    {
+      "@id": "urn:uuid:ef707e68-1306-5669-a185-59f1df068369",
+      "vulnerability": {
+        "name": "CVE-2026-22185"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libldap2@2.6.10%2Bdfsg-1%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/openldap@2.6.10%2Bdfsg-1%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The underflow is in LMDB's mdb_load tool, which the image doesn't include."
+    },
+    {
+      "@id": "urn:uuid:b3c3e194-b0fe-5c4a-af7b-f8998100a36f",
+      "vulnerability": {
+        "name": "CVE-2026-53910"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/diffutils@1%3A3.10-4%2Bdeb13u0%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The overflow needs diff3 run on crafted input; git merges with its own code, not diff3."
+    },
+    {
+      "@id": "urn:uuid:ba31bde1-9d48-55f2-ac8e-7a06a90db180",
+      "vulnerability": {
+        "name": "CVE-2026-56391"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/coreutils@9.7-3%2Bdhi4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The read needs uniq -w with crafted multibyte input."
+    },
+    {
+      "@id": "urn:uuid:5e3292f5-7be1-5394-9c51-a4f1f7a018b3",
+      "vulnerability": {
+        "name": "CVE-2026-56392"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/coreutils@9.7-3%2Bdhi4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image runs no network services and no program in it passes input from elsewhere to this code. The overflow needs unexpand with a huge -t tab stop."
+    },
+    {
+      "@id": "urn:uuid:fbe6125e-4977-5e13-855d-37ca2debc740",
+      "vulnerability": {
+        "name": "CVE-2026-67693"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The certificate checks need TLS through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:9128024e-743e-5f23-890f-1ce3e5ddd460",
+      "vulnerability": {
+        "name": "CVE-2026-82208"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Debian's libcurl4t64 uses OpenSSL for TLS and libssh2 for SCP/SFTP (it links libssl.so.3 and libssh2.so.1), and is built without wolfSSL, wolfSSH and libssh. The flaw is in the wolfSSL backend."
+    },
+    {
+      "@id": "urn:uuid:8f2102db-4b3d-5fe3-9639-cace93ccd4a0",
+      "vulnerability": {
+        "name": "CVE-2026-87866"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Debian's libcurl4t64 uses OpenSSL for TLS and libssh2 for SCP/SFTP (it links libssl.so.3 and libssh2.so.1), and is built without wolfSSL, wolfSSH and libssh. The flaw is in the wolfSSL backend."
+    },
+    {
+      "@id": "urn:uuid:d17d8874-a4a3-5a14-89df-f451792fb28d",
+      "vulnerability": {
+        "name": "CVE-2026-88647"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The certificate checks need TLS through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:eb7e261c-9744-5803-accb-cedf35f19a09",
+      "vulnerability": {
+        "name": "CVE-2026-88648"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The name constraint checks need TLS through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:1ea91efd-f606-50c8-92c8-8e1f1f36b378",
+      "vulnerability": {
+        "name": "CVE-2026-95184"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The name constraint checks need TLS through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:26963e9b-dccd-5aeb-9e9b-99d5f346653a",
+      "vulnerability": {
+        "name": "CVE-2026-95209"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The certificate checks need TLS through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:8138e83b-fccc-5102-b176-e5996dcceb53",
+      "vulnerability": {
+        "name": "CVE-2026-95210"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gnutls28@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            },
+            {
+              "@id": "pkg:deb/debian/libgnutls30t64@3.8.9-3%2Bdeb13u4%2Bdhi2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The only library in the image that links libgnutls is librtmp, which libcurl uses for rtmp:// URLs only. libcurl's only users in the image are git's HTTP helpers (git-remote-http, git-http-fetch, git-http-push) and git-imap-send; git restricts libcurl to HTTP(S) and FTP(S), and git-imap-send to IMAP(S). The certificate checks need TLS through GnuTLS."
+    },
+    {
+      "@id": "urn:uuid:7bff6605-a2af-5aca-8d38-feaa7df87c80",
+      "vulnerability": {
+        "name": "CVE-2026-9547"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/startown/workspace-py@0.3.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/curl@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            },
+            {
+              "@id": "pkg:deb/debian/libcurl4t64@8.14.1-2%2Bdeb13u7%2Bdhi1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "timestamp": "2026-11-08T16:00:00Z",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Debian's libcurl4t64 uses OpenSSL for TLS and libssh2 for SCP/SFTP (it links libssl.so.3 and libssh2.so.1), and is built without wolfSSL, wolfSSH and libssh. The flaw is in the libssh backend."
+    }
+  ]
+}
