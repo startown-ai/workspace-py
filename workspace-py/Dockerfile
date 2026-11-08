@@ -1,4 +1,4 @@
-FROM dhi.io/debian-base:trixie-dev@sha256:61025cea33d5910165ced8b33edd3f6b6bfe161e129174887936a1b9a1442b20
+FROM dhi.io/debian-base:trixie-dev@sha256:94571f3dc07fbc7166f6f1cbf1fe068a7647198ee2554e6b90d59a68cc8b053c
 ENV LANG=C.UTF-8
 
 COPY --from=docker.io/startown/zsh:5.9-1@sha256:87cecb527cebce57a03eeeb7fdb99c1633a3291845e8a25296a8e7997db54192 /opt/zsh/ /
