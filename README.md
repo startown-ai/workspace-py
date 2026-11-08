@@ -1,6 +1,6 @@
 # workspace-py
 
-![Docker Hub](https://img.shields.io/docker/v/startown/workspace-py?sort=date&label=docker%20hub&logo=docker&logoColor=white&style=flat-square) ![Image size](https://img.shields.io/docker/image-size/startown/workspace-py/0.2.0?label=size&style=flat-square) ![License](https://img.shields.io/github/license/startown-ai/workspace-py?style=flat-square)
+![Docker Hub](https://img.shields.io/docker/v/startown/workspace-py?sort=date&label=docker%20hub&logo=docker&logoColor=white&style=flat-square) ![Image size](https://img.shields.io/docker/image-size/startown/workspace-py/0.3.0?label=size&style=flat-square) ![License](https://img.shields.io/github/license/startown-ai/workspace-py?style=flat-square)
 
 A workspace for Python development on [Docker Hardened Images](https://docs.docker.com/dhi/), with:
 
@@ -14,7 +14,7 @@ A workspace for Python development on [Docker Hardened Images](https://docs.dock
 Pull the image:
 
 ```bash
-docker pull startown/workspace-py:0.2.0
+docker pull startown/workspace-py:0.3.0
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ Use it as a dev container image in `.devcontainer/devcontainer.json`:
 
 ```json
 {
-  "image": "startown/workspace-py:0.2.0",
+  "image": "startown/workspace-py:0.3.0",
   "containerEnv": {
     "SSL_CERT_FILE": "/etc/ssl/certs/ca-certificates.crt"
   }
@@ -35,7 +35,7 @@ Use it as a dev container image in `.devcontainer/devcontainer.json`:
 Or start a shell in the current folder:
 
 ```bash
-docker run -it --rm -v "$PWD":/workspace -w /workspace startown/workspace-py:0.2.0
+docker run -it --rm -v "$PWD":/workspace -w /workspace startown/workspace-py:0.3.0
 ```
 
 ## License
