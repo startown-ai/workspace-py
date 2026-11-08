@@ -1,24 +1,24 @@
-group "default" {
-  targets = ["workspace-py"]
+target "zsh" {
+  platforms = ["linux/amd64", "linux/arm64"]
+  context   = "zsh"
+  attest    = ["type=provenance,mode=max", "type=sbom"]
 }
 
 target "jj" {
   platforms = ["linux/amd64", "linux/arm64"]
   context   = "jj"
+  attest    = ["type=provenance,mode=max", "type=sbom"]
 }
 
-target "zsh" {
+target "uv" {
   platforms = ["linux/amd64", "linux/arm64"]
-  context   = "zsh"
+  context   = "uv"
+  attest    = ["type=provenance,mode=max", "type=sbom"]
 }
 
 target "workspace-py" {
   platforms = ["linux/amd64", "linux/arm64"]
   context   = "workspace-py"
-  contexts = {
-    jj  = "target:jj"
-    zsh = "target:zsh"
-  }
   tags   = ["startown/workspace-py:0.2.0"]
-  attest = ["type=provenance,mode=min", "type=sbom"]
+  attest    = ["type=provenance,mode=min", "type=sbom"]
 }
