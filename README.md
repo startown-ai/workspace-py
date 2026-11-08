@@ -4,10 +4,10 @@
 
 A workspace for Python development on [Docker Hardened Images](https://docs.docker.com/dhi/), with:
 
-- [uv](https://github.com/astral-sh/uv) and uvx, and Python 3.14 installed through uv
+- [uv](https://github.com/astral-sh/uv) and uvx, which install Python when a project needs it
 - [Jujutsu](https://github.com/jj-vcs/jj) (jj) and Git
 - [Zsh](https://www.zsh.org) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), the [Pure](https://github.com/sindresorhus/pure) prompt, [z](https://github.com/agkozak/zsh-z), [syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), and [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- OpenSSH client, tree, and btop
+- OpenSSH client
 
 ## Installation
 
