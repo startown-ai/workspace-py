@@ -22,6 +22,6 @@ target "uv" {
 target "workspace-py" {
   platforms = ["linux/amd64", "linux/arm64"]
   context   = "workspace-py"
-  tags      = ["startown/workspace-py:0.3.1"]
+  tags      = ["startown/workspace-py:0.3.2"]
   attest    = ["type=provenance,mode=min", "type=sbom"]
 }
