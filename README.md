@@ -1,6 +1,13 @@
-# workspace-py
+<h1 align="center">
+  <img src="docs/icon.svg" alt="" width="120"><br>
+  workspace-py
+</h1>
 
-![Docker Hub](https://img.shields.io/docker/v/startown/workspace-py?sort=date&label=docker%20hub&logo=docker&logoColor=white&style=flat-square) ![Image size](https://img.shields.io/docker/image-size/startown/workspace-py/0.3.1?label=size&style=flat-square) ![License](https://img.shields.io/github/license/startown-ai/workspace-py?style=flat-square)
+<p align="center">
+  <img src="https://img.shields.io/docker/v/startown/workspace-py?sort=date&label=docker%20hub&logo=docker&logoColor=white&style=flat-square" alt="Docker Hub">
+  <img src="https://img.shields.io/docker/image-size/startown/workspace-py/0.3.1?label=size&style=flat-square" alt="Image size">
+  <img src="https://img.shields.io/github/license/startown-ai/workspace-py?style=flat-square" alt="License">
+</p>
 
 A dev container image for Python with:
 
