@@ -17,6 +17,15 @@ Pull the image:
 docker pull startown/workspace-py:0.3.1
 ```
 
+Docker Scout reports CVEs in the image's Debian packages. [workspace-py.vex.json](workspace-py.vex.json) says for each one whether it affects this image and why. Pass it to Scout to see only the ones that do:
+
+```bash
+docker scout cves \
+  --vex-location https://raw.githubusercontent.com/startown-ai/workspace-py/main/workspace-py.vex.json \
+  --vex-author '<paxonlee@startown.ai>' \
+  startown/workspace-py:0.3.1
+```
+
 ## Usage
 
 Use it as a dev container image in `.devcontainer/devcontainer.json`:
