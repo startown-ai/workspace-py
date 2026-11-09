@@ -11,4 +11,8 @@ RUN apt-get update && \
       openssh-client=1:10.0p1-7+deb13u4+dhi2 && \
     rm -rf /var/lib/apt/lists/*
 
+RUN update-shells && \
+    usermod --shell /usr/bin/zsh root && \
+    ln -s certs/ca-certificates.crt /etc/ssl/cert.pem
+
 ENTRYPOINT ["/usr/bin/zsh"]
