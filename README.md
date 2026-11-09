@@ -2,12 +2,15 @@
 
 ![Docker Hub](https://img.shields.io/docker/v/startown/workspace-py?sort=date&label=docker%20hub&logo=docker&logoColor=white&style=flat-square) ![Image size](https://img.shields.io/docker/image-size/startown/workspace-py/0.3.1?label=size&style=flat-square) ![License](https://img.shields.io/github/license/startown-ai/workspace-py?style=flat-square)
 
-A workspace for Python development on [Docker Hardened Images](https://docs.docker.com/dhi/), with:
+A dev container image for Python with:
 
-- [uv](https://github.com/astral-sh/uv) and uvx, which install Python when a project needs it
-- [Jujutsu](https://github.com/jj-vcs/jj) (jj) and Git
-- [Zsh](https://www.zsh.org) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), the [Pure](https://github.com/sindresorhus/pure) prompt, [z](https://github.com/agkozak/zsh-z), [syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), and [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- OpenSSH client
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) with the [Pure](https://github.com/sindresorhus/pure) prompt
+  - [z](https://github.com/agkozak/zsh-z) for directory jumping
+  - [syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  - [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [uv](https://github.com/astral-sh/uv) to install Python and manage projects
+- [Jujutsu](https://github.com/jj-vcs/jj) and [Git](https://git-scm.com) for version control
+- [OpenSSH](https://www.openssh.com) client to push and sign commits
 
 ## Installation
 
@@ -17,18 +20,9 @@ Pull the image:
 docker pull startown/workspace-py:0.3.1
 ```
 
-Docker Scout reports CVEs in the image's Debian packages. [workspace-py.vex.json](workspace-py.vex.json) says for each one whether it affects this image and why. Pass it to Scout to see only the ones that do:
-
-```bash
-docker scout cves \
-  --vex-location https://raw.githubusercontent.com/startown-ai/workspace-py/main/workspace-py.vex.json \
-  --vex-author '<paxonlee@startown.ai>' \
-  startown/workspace-py:0.3.1
-```
-
 ## Usage
 
-Use it as a dev container image in `.devcontainer/devcontainer.json`:
+In your project's `.devcontainer/devcontainer.json`:
 
 ```json
 {
@@ -41,10 +35,15 @@ Use it as a dev container image in `.devcontainer/devcontainer.json`:
 
 `SSL_CERT_FILE` points Python at the system certificates; without it, HTTPS requests from Python fail certificate verification.
 
-Or start a shell in the current folder:
+## Security
+
+Scan the image with Docker Scout (needs a Docker login). Our [VEX file](workspace-py.vex.json) marks which reported CVEs affect it:
 
 ```bash
-docker run -it --rm -v "$PWD":/workspace -w /workspace startown/workspace-py:0.3.1
+docker scout cves \
+  --vex-location https://raw.githubusercontent.com/startown-ai/workspace-py/main/workspace-py.vex.json \
+  --vex-author '<paxonlee@startown.ai>' \
+  startown/workspace-py:0.3.1
 ```
 
 ## License
