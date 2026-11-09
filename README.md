@@ -5,7 +5,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/docker/v/startown/workspace-py?sort=date&label=docker%20hub&logo=docker&logoColor=white&style=flat-square" alt="Docker Hub">
-  <img src="https://img.shields.io/docker/image-size/startown/workspace-py/0.3.1?label=size&style=flat-square" alt="Image size">
+  <img src="https://img.shields.io/docker/image-size/startown/workspace-py/0.3.2?label=size&style=flat-square" alt="Image size">
   <img src="https://img.shields.io/github/license/startown-ai/workspace-py?style=flat-square" alt="License">
 </p>
 
@@ -24,7 +24,7 @@ A dev container image for Python with:
 Pull the image:
 
 ```bash
-docker pull startown/workspace-py:0.3.1
+docker pull startown/workspace-py:0.3.2
 ```
 
 ## Usage
@@ -33,14 +33,9 @@ In your project's `.devcontainer/devcontainer.json`:
 
 ```json
 {
-  "image": "startown/workspace-py:0.3.1",
-  "containerEnv": {
-    "SSL_CERT_FILE": "/etc/ssl/certs/ca-certificates.crt"
-  }
+  "image": "startown/workspace-py:0.3.2"
 }
 ```
-
-`SSL_CERT_FILE` points Python at the system certificates; without it, HTTPS requests from Python fail certificate verification.
 
 ## Security
 
@@ -50,7 +45,7 @@ Scan the image with Docker Scout (needs a Docker login). Our [VEX file](workspac
 docker scout cves \
   --vex-location https://raw.githubusercontent.com/startown-ai/workspace-py/main/workspace-py.vex.json \
   --vex-author '<paxonlee@startown.ai>' \
-  startown/workspace-py:0.3.1
+  startown/workspace-py:0.3.2
 ```
 
 ## License
