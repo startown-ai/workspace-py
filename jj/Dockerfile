@@ -15,7 +15,6 @@ RUN cargo install \
       --bin jj jj-cli \
       --version 0.47.1 && \
     rm /opt/jj/.crates.toml /opt/jj/.crates2.json
-
 RUN install -Dm644 -t /opt/jj/share/licenses/jj ~/.cargo/registry/src/*/jj-cli-0.47.1/LICENSE
 
 FROM scratch
