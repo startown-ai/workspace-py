@@ -9,14 +9,14 @@ RUN apt-get update && \
     rustup set profile minimal && \
     rustup default 1.99.1
 
+ADD --checksum=sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4 https://raw.githubusercontent.com/astral-sh/uv/0.13.7/LICENSE-APACHE /tmp/LICENSE
+
 RUN cargo install \
       --locked \
       --root /opt/uv \
       --bin uv --bin uvx uv \
       --version 0.13.7 && \
     rm /opt/uv/.crates.toml /opt/uv/.crates2.json
-
-ADD https://raw.githubusercontent.com/astral-sh/uv/0.13.7/LICENSE-APACHE /tmp/LICENSE
 RUN install -Dm644 -t /opt/uv/share/licenses/uv /tmp/LICENSE
 
 FROM scratch
